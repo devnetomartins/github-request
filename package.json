@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "materialize-css": "^1.0.0-rc.2",
     "register-service-worker": "^1.6.2",
+    "axios": "^0.19.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -25,6 +27,7 @@
     "babel-jest": "^23.6.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "flush-promises": "^1.0.2",
     "vue-template-compiler": "^2.6.10"
   }
 }

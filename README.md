@@ -1,34 +1,30 @@
 # github-request
 
-## Project setup
-```
-npm install
-```
+> Sistema que realiza requests na api do github
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Passos para instalação
 
-### Compiles and minifies for production
-```
-npm run build
-```
+``` bash
 
-### Run your tests
-```
-npm run test
-```
+#Instale o node
+https://nodejs.org/en/download/
 
-### Lints and fixes files
-```
-npm run lint
-```
+# Clone o projeto
+$ git clone url
 
-### Run your unit tests
-```
-npm run test:unit
-```
+# Instale as dependencias
+$ cd nome_da_pasta && npm install
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Inicie o servidor
+$ npm run serve
+
+# Apos o sistema estar rodando no localhost fique atento ao endereço que será informado no terminal, ela será a rota que você utilizará para acessar o sistema!
+
+```
+## Arquitetura
+
+```
+O projeto funciona da seguinte maneira:
+O App.vue está com toda a lógica de frontend. Nele tem o campo para inserir o texto da pesquisa e um botão para acioná-la.
+Ao clicar no botão "FIND" o texto inserido é validado e, caso não seja válido, uma mensagem é exibida informando ao usuário. Caso o contrário, será chamada a função dentro do arquivo user_info.js para realizar a request do tipo GET onde na mesma não necessidade de autenticação. O arquivo user_info.js (que está localizado dentro da pasta services) então requisita a API do Github (a configuração é feita  no arquivo config.js localizado no mesmo diretório). Após a request ter sido realizada, a API nos retorna um JSON caso haja esse username no github, sendo assim, será preenchida a tabela com todos os repositorios referente ao usuário informado e todas as stars de cada repositório, caso o username sejá inválido, não acontecerá nada.
+```
