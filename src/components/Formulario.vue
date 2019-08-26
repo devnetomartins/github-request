@@ -52,11 +52,16 @@ export default {
         Info.listar(this.user).then(response => {
         var dados = response;
         if(dados.status == 200){
+          
+          if(this.result.length > 0){
+            this.result.length = 0;
+          }
+          
           for(var y=0; y<dados.data.length; y++){
             this.result.push({"id": dados.data[y].id, "name" : dados.data[y].name,
              "stars" : dados.data[y].stargazers_count });
           }
-          console.log(JSON.stringify(this.result))
+          
           this.view_data = true;
         }
       }).catch(() => {
