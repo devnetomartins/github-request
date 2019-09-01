@@ -2,23 +2,24 @@
 
 > Sistema que realiza requests na api do github
 
-## Passos para instalação
+## Passos para execução
+>Certifique-se de ter o NodeJs e o git instalado no seu sistema operacional.
 
 ``` bash
 
-#Instale o node
-https://nodejs.org/en/download/
-
 # Clone o projeto
-$ git clone url
+$ git clone https://github.com/devnetomartins/github-request.git
 
 # Instale as dependencias
-$ cd nome_da_pasta && npm install
+$ cd github-request && npm install
 
 # Inicie o servidor
 $ npm run serve
 
 # Apos o sistema estar rodando no localhost fique atento ao endereço que será informado no terminal, ela será a rota que você utilizará para acessar o sistema!
+
+# Para executar teste unitario
+$ npm run test:unit
 
 ```
 ## Arquitetura
